@@ -46,7 +46,7 @@ class Interactive extends Component {
     displayEmissionsSeries: true,
     displayCO2Series: true,
     displayTempSeries: true,
-    displayDataTable: true,
+    displayDataTable: false,
     data : [{
      "year": new Date(1960, 0),
      "co2Emissions": 4.14,
@@ -677,14 +677,7 @@ componentWillUnmount() {
                   </Button>
                 </div>
                 }
-                <br/>
-                <p className="sidebar-title">Show data table:</p>
-                <FormControlLabel
-                    value="displayDataTable"
-                    control={<Checkbox color="primary" checked={this.state.displayDataTable} onChange={this.handleDataTableDisplay} />}
-                    label="Data Table"
-                    onChange={this.handleDataTableDisplay}
-              />
+
                 </div>
             </div>
             <div id="graph-area" className="col-sm-8">
